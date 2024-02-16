@@ -1,6 +1,7 @@
 .item {
     box-sizing: border-box;
     width: 270px;
+    height: 330px;
     overflow: hidden;
     border: 1px solid black;
     padding: 10px;
@@ -8,18 +9,34 @@
     margin-right: 10px;
     border-radius: 20px;
     margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
 }
 .item img {
     max-width: 100%;
-    height: auto;
+    height: 200px;
     display: block;
     border-radius: 20px;
+    object-fit: cover;
+    margin: 0 auto;
+}
+.itemTitle {
+    max-width: 100%;
+    font-size: 20px;
+    text-align: center;
+}
+.itemTitle:hover {
+    text-decoration: underline;
+    color: brown
 }
 
 .priceAndBuy {
-    margin-top: 20px;
+    width: 100%;
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 .addButton {
     color: white;

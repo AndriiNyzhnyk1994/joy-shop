@@ -1,13 +1,30 @@
+import { ItemType } from '../../redux/slices/items/slice'
 import s from './Item.module.css'
 
-const Item = () => {
+type ItemPropsType = ItemType
+
+
+const Item: React.FC<ItemPropsType> = (props) => {
+    const {
+        id,
+        title,
+        price,
+        isAviable,
+        imageUrl,
+        category,
+        description,
+        rating,
+        reviews
+    } = props
+
+ const croppedTitle = title.length > 35 ? title.substring(0, 35) + '...' : title
     return (
         <div className={s.item}>
-            <img src="https://m.media-amazon.com/images/I/61dV+aYlNmL._SX679_.jpg" alt="IMAGE" />
-            <h4 className={s.itemTitle}>Title</h4>
+            <img src={imageUrl} alt=" ITEM-IMAGE" />
+            <a href='#' className={s.itemTitle}>{croppedTitle}</a>
             <div className={s.priceAndBuy}>
+                <div className={s.price}>{price}</div>
                 <button className={s.addButton}>ADD TO CART</button>
-                <div className={s.price}>300</div>
             </div>
         </div>
     )

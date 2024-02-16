@@ -3,9 +3,7 @@ import Item from './Components/Item/Item';
 import ItemsList from './Components/ItemsList/ItemsList';
 import Header from './Header/Header';
 
-const App = () => {
-
-
+const App: React.FC = () => {
   return (
     <>
       <Header />
