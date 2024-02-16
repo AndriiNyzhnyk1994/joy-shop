@@ -1,24 +1,19 @@
 import './App.css'
+import Item from './Components/Item/Item';
+import ItemsList from './Components/ItemsList/ItemsList';
 import Header from './Header/Header';
 
-function App() {
+const App = () => {
 
 
   return (
     <>
-     <Header/>
-     <main>
-      <div className='container'>
-        <div className='items'>
-          <ul className='itemsList'>
-            <li className="item">
-              <img src="https://m.media-amazon.com/images/I/61dV+aYlNmL._SX679_.jpg" alt="IMAGE" />
-              
-            </li>
-          </ul>
+      <Header />
+      <main>
+        <div className='container'>
+          <ItemsList />
         </div>
-      </div>
-     </main>
+      </main>
     </>
   );
 }
