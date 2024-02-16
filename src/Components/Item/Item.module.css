@@ -1,17 +1,23 @@
 .item {
     box-sizing: border-box;
-    width: 300px;
+    width: 270px;
     overflow: hidden;
     border: 1px solid black;
     padding: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    border-radius: 20px;
+    margin-bottom: 20px;
 }
 .item img {
     max-width: 100%;
     height: auto;
     display: block;
+    border-radius: 20px;
 }
 
 .priceAndBuy {
+    margin-top: 20px;
     display: flex;
     justify-content: space-between;
 }
@@ -20,10 +26,12 @@
     background-color: black;
     width: 150px;
     height: 40px;
+    border-radius: 10px;
 }
 .price {
     display: flex;
     align-items: center;
     font-size: 24px;
     font-weight: 500;
+    margin-right: 10px;
 }

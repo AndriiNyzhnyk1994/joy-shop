@@ -1,17 +1,42 @@
-import React from 'react'
 import Item from '../Item/Item'
+import s from './ItemsList.module.css'
 
 const ItemsList = () => {
+
+
+
     return (
-        <div className='items'>
-            <ul className='itemsList'>
-                <li>
-                    <Item />
-                    <Item />
-                    <Item />
-                </li>
-            </ul>
-        </div>
+        <main className={s.itemsBlock}>
+            <div className='container'>
+                <ul className={s.itemsList}>
+                    <li>
+                        <Item />
+                    </li>
+                    <li>
+                        <Item />
+                    </li>
+                    <li>
+                        <Item />
+                    </li>
+                    <li>
+                        <Item />
+                    </li>
+                    <li>
+                        <Item />
+                    </li>
+                    <li>
+                        <Item />
+                    </li>
+                    <li>
+                        <Item />
+                    </li>
+                    <li>
+                        <Item />
+                    </li>
+                </ul>
+            </div>
+        </main >
+
     )
 }
 
