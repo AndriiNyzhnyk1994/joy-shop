@@ -1,0 +1,8 @@
+.cart {
+    width: 100%;
+}
+
+.cartInner {
+    min-height: 500px;
+    background-color: aqua;
+}

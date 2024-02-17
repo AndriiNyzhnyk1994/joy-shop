@@ -42,7 +42,7 @@ export const fetchItems = createAsyncThunk<ItemType[], FetchItemsArgsType>(
     'items/fetchItems',
     async (params) => {
         const {page} = params
-        const {data} = await axios.get<ItemType[]>(`https://653db286f52310ee6a9a45a9.mockapi.io/element`)
+        const {data} = await axios.get<ItemType[]>(`https://653db286f52310ee6a9a45a9.mockapi.io/elements`)
         return data
     }
 
@@ -72,6 +72,7 @@ const itemsSlice = createSlice({
             })
     }
 })
+
 
 export const {setItems} = itemsSlice.actions
 export default itemsSlice.reducer

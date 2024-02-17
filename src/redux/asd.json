@@ -1,68 +1,98 @@
 [
     {
-    "title": "Wireless Keyboard",
-    "id": 1,
-    "price": 250,
-    "isAviable": true,
-    "imageUrl": "https://m.media-amazon.com/images/I/61dV+aYlNmL._SX679_.jpg",
-    "category": "PC accessories",
-    "rating": 5,
-    "description": "Good One",
-    "reviews": [{"name": "Bob", "text": "Good"}]
-},
-{
-    "title": "Wireless Mouse",
-    "id": 2,
-    "price": 100,
-    "isAviable": true,
-    "imageUrl": "https://content.rozetka.com.ua/goods/images/big/281362714.jpg",
-    "category": "PC accessories",
-    "rating": 5,
-    "description": "Good One",
-    "reviews": [{"name": "Bob", "text": "Good"}]
-},
-{
-    "title": "HyperX Quadcast (4P5P6AA)",
-    "id": 3,
-    "price": 6000,
-    "isAviable": true,
-    "imageUrl": "https://content.rozetka.com.ua/goods/images/big/13933960.jpg",
-    "category": "PC accessories",
-    "rating": 5,
-    "description": "Good One",
-    "reviews": [{"name": "Bob", "text": "Good"}]
-},
-{
-    "title": "Logitech POP Keys Wireless Mechanical Keyboard UA Daydream Mint",
-    "id": 4,
-    "price": 599,
-    "isAviable": true,
-    "imageUrl": "https://content1.rozetka.com.ua/goods/images/big/290489759.jpg",
-    "category": "PC accessories",
-    "rating": 5,
-    "description": "Good One",
-    "reviews": [{"name": "Bob", "text": "Good"}]
-},
-{
-    "title": "Моноблок ARTLINE Home G73 ",
-    "id": 5,
-    "price": 599,
-    "isAviable": true,
-    "imageUrl": "https://content.rozetka.com.ua/goods/images/big/350678368.jpg",
-    "category": "PC accessories",
-    "rating": 5,
-    "description": "Good One",
-    "reviews": [{"name": "Bob", "text": "Good"}]
-},
-{
-    "title": "Игровой Компьютер 1stPlayer - Intel Core",
-    "id": 1,
-    "price": 599,
-    "isAviable": true,
-    "imageUrl": "https://m.media-amazon.com/images/I/61dV+aYlNmL._SX679_.jpg",
-    "category": "PC accessories",
-    "rating": 5,
-    "description": "Good One",
-    "reviews": [{"name": "Bob", "text": "Good"}]
-}
-]
+      "title": "Wireless Keyboard",
+      "id": "1",
+      "price": 250,
+      "isAviable": true,
+      "imageUrl": "https://content1.rozetka.com.ua/goods/images/preview/397236975.jpg",
+      "category": "PC accessories",
+      "rating": 5,
+      "description": "Good One",
+      "reviews": [
+        {
+          "name": "Bob",
+          "text": "Good"
+        }
+      ]
+    },
+    {
+      "title": "Wireless Mouse",
+      "id": "2",
+      "price": 100,
+      "isAviable": true,
+      "imageUrl": "https://content.rozetka.com.ua/goods/images/preview/281362714.jpg",
+      "category": "PC accessories",
+      "rating": 5,
+      "description": "Good One",
+      "reviews": [
+        {
+          "name": "Bob",
+          "text": "Good"
+        }
+      ]
+    },
+    {
+      "title": "HyperX Quadcast (4P5P6AA)",
+      "id": "3",
+      "price": 6000,
+      "isAviable": true,
+      "imageUrl": "https://content.rozetka.com.ua/goods/images/preview/13933960.jpg",
+      "category": "PC accessories",
+      "rating": 5,
+      "description": "Good One",
+      "reviews": [
+        {
+          "name": "Bob",
+          "text": "Good"
+        }
+      ]
+    },
+    {
+      "title": "Клавиатура беспроводная Logitech POP Keys Wireless Mechanical Keyboard UA Daydream Mint (920-010736)",
+      "id": "4",
+      "price": 599,
+      "isAviable": true,
+      "imageUrl": "https://content1.rozetka.com.ua/goods/images/preview/290489759.jpg",
+      "category": "PC accessories",
+      "rating": 5,
+      "description": "Good One",
+      "reviews": [
+        {
+          "name": "Bob",
+          "text": "Good"
+        }
+      ]
+    },
+    {
+      "title": "Моноблок ARTLINE Home G73 ",
+      "id": "5",
+      "price": 599,
+      "isAviable": true,
+      "imageUrl": "https://content.rozetka.com.ua/goods/images/preview/350678368.jpg",
+      "category": "PC accessories",
+      "rating": 5,
+      "description": "Good One",
+      "reviews": [
+        {
+          "name": "Bob",
+          "text": "Good"
+        }
+      ]
+    },
+    {
+      "title": "Игровой Компьютер 1stPlayer - Intel Core",
+      "id": "6",
+      "price": 599,
+      "isAviable": true,
+      "imageUrl": "https://content2.rozetka.com.ua/goods/images/preview/365027782.jpg",
+      "category": "PC accessories",
+      "rating": 5,
+      "description": "Good One",
+      "reviews": [
+        {
+          "name": "Bob",
+          "text": "Good"
+        }
+      ]
+    }
+  ]
