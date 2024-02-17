@@ -43,3 +43,17 @@ h1, h2, h3, h4 {
 ul {
     padding-inline-start: 0;
 }
+.loadingBlock {
+    width: 100px;
+    margin: 200px auto;
+}
+.loadingIcon {
+    width: 100%;
+    display: block;
+    animation: spin 2s linear infinite;
+}
+@keyframes spin {
+    0% { transform: rotate(0deg); } /* Начальная позиция */
+    100% { transform: rotate(360deg); } /* Конечная позиция */
+}
+

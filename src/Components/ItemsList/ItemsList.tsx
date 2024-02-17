@@ -2,14 +2,17 @@ import { useSelector } from 'react-redux'
 import Item from '../Item/Item'
 import s from './ItemsList.module.css'
 import { RootState, useAppDispatch } from '../../redux/store'
-import { fetchItems } from '../../redux/slices/items/slice'
+import { Status, fetchItems } from '../../redux/slices/items/slice'
 import { useEffect } from 'react'
+import loadingIcon from '../../assets/images/loading.png'
+import ErrorBlock from '../Error/Error'
+
 
 const ItemsList: React.FC = () => {
-    const {items, status} = useSelector((state: RootState) => state.items)
+    const { items, status } = useSelector((state: RootState) => state.items)
     const dispatch = useAppDispatch()
     const getItems = async () => {
-        dispatch(fetchItems({page: '1'}))
+        dispatch(fetchItems({ page: '1' }))
         window.scrollTo(0, 0)
     }
 
@@ -17,16 +20,27 @@ const ItemsList: React.FC = () => {
         getItems()
     }, [])
 
-    console.log(items);
-    
+
+
+    const itemsList = items.map(item => <li key={item.id}>
+        <Item  {...item} />
+    </li>)
+
     return (
         <main className={s.itemsBlock}>
             <div className='container'>
-                <ul className={s.itemsList}>
-                    {items.map(item => <li key={item.id}>
-                        <Item  {...item} />
-                    </li>) }
-                </ul>
+                {status === Status.LOADING
+                    ? <div className={'loadingBlock'}>
+                        <img className='loadingIcon' src={loadingIcon} alt="LOADING..." />
+                    </div>
+                    : <ul className={s.itemsList}>
+                        {itemsList}
+                    </ul>
+                }
+                {status === Status.ERROR
+                    ? <ErrorBlock/>
+                    : ''
+                } 
             </div>
         </main >
 
