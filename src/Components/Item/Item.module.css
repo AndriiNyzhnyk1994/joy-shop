@@ -1,6 +1,6 @@
 .item {
     box-sizing: border-box;
-    width: 270px;
+    width: 210px;
     height: 330px;
     overflow: hidden;
     border: 1px solid black;
@@ -19,8 +19,9 @@
     height: 200px;
     display: block;
     border-radius: 20px;
-    object-fit: cover;
+    object-fit: contain;
     margin: 0 auto;
+    cursor: pointer;
 }
 .itemTitle {
     max-width: 100%;
@@ -44,7 +45,16 @@
     width: 150px;
     height: 40px;
     border-radius: 10px;
+    cursor: pointer;
 }
+.addButton:hover {
+    opacity: 0.8;
+}
+.addButton:active {
+    color: black;
+    background-color: white;
+}
+
 .price {
     display: flex;
     align-items: center;

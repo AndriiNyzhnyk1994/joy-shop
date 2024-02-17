@@ -17,7 +17,7 @@ const Item: React.FC<ItemPropsType> = (props) => {
         reviews
     } = props
 
- const croppedTitle = title.length > 35 ? title.substring(0, 35) + '...' : title
+ const croppedTitle = title.length > 25 ? title.substring(0, 25) + '...' : title
     return (
         <div className={s.item}>
             <img src={imageUrl} alt=" ITEM-IMAGE" />
