@@ -1,8 +1,25 @@
 .cart {
     width: 100%;
+    margin-top: 30px; 
+}
+
+.cartTitle {
+    border-bottom: 1px solid lightgray;
+    padding-bottom: 10px;
+}
+.cartTitle h2 {
+    font-size: 25px;
+    font-weight: 500;
+    margin-left: 50px;
 }
 
 .cartInner {
     min-height: 500px;
-    background-color: aqua;
+}
+
+.cartItemsList {
+    max-width: 1000px;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
 }
