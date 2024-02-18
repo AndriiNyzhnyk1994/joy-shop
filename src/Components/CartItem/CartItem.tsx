@@ -1,6 +1,5 @@
 import s from './CartItem.module.css'
 import delIconBlack from '../../assets/images/delete-icon-black.svg'
-import delIconWhite from '../../assets/images/delete-icon-white.svg'
 import { CartItemType, addItem, minusItem, removeItem } from '../../redux/slices/cart/slice'
 import React from 'react'
 import { useAppDispatch } from '../../redux/store'

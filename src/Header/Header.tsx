@@ -4,6 +4,7 @@ import s from './Header.module.css'
 import { RootState } from '../redux/store'
 import { CartItemType } from '../redux/slices/cart/slice'
 import { Link } from 'react-router-dom'
+import { useEffect, useRef } from 'react'
 
 const Header = () => {
 
@@ -12,6 +13,18 @@ const Header = () => {
     const totalCount = items.reduce((acc: number, el: CartItemType) => {
         return acc + el.count
     }, 0)
+
+    const isMounted = useRef(false)
+
+    useEffect(() => {
+        if(isMounted.current) {
+            const json = JSON.stringify(items)
+            localStorage.setItem('cartData', json)
+        }else {
+            isMounted.current = true
+        }
+    }, [items])
+
 
     return (
         <header>

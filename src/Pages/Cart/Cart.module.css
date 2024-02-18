@@ -6,11 +6,21 @@
 .cartTitle {
     border-bottom: 1px solid lightgray;
     padding-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
 }
 .cartTitle h2 {
     font-size: 25px;
     font-weight: 500;
     margin-left: 50px;
+}
+
+.clearCartButton {
+    width: 30px;
+}
+.clearCartButton img {
+    width: 100%;
+    opacity: 0.5;
 }
 
 .cartInner {

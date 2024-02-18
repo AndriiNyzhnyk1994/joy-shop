@@ -3,7 +3,7 @@ import CartItem from '../../Components/CartItem/CartItem'
 import s from './Cart.module.css'
 import { useSelector } from 'react-redux'
 import { RootState } from '../../redux/store'
-
+import delIconBlack from '../../assets/images/delete-icon-black.svg'
 
 function Cart() {
     const { items, totalPrice } = useSelector((state: RootState) => state.cart)
@@ -15,6 +15,9 @@ function Cart() {
             <div className='container'>
                 <div className={s.cartTitle}>
                     <h2>Cart</h2>
+                    <button className={s.clearCartButton}>
+                        <img src={delIconBlack} alt="Clear" />
+                    </button>
                 </div>
                 <div className={s.cartInner}>
                     <ul className={s.cartItemsList}>
