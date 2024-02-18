@@ -12,7 +12,6 @@
 .cartItemTop {
     display: flex;
     justify-content: space-between;
-    
 }
 
 .cartImageBlock {
@@ -29,15 +28,31 @@
 }
 
 .deleteCartItem {
+    box-sizing: border-box;
+    width: 40px;
     display: flex;
+    height: 40px;
     margin-left: 10px;
+    cursor: pointer;
+    padding: 8px;
+    opacity: 0.3;
+    border-radius: 20px;
+    transition: background-color 0.6s ease;
+}
+.deleteCartItem img {
+    width: 100%;    
+}
+.deleteCartItem:hover {
+    background-color: lightgray;
+    opacity: 1;
 }
 
 .cartItemBottom {
     display: flex;
     justify-content: flex-end;
-    margin-top: 10px;
+    margin-top: 5px;
 }
+
 
 .countPanel {
     width: 250px;
@@ -47,9 +62,14 @@
     width: 30px;
     outline: none;
 }
+
 .cartItemBottom button {
+    width: 25px;
+    height: 25px;
     margin-left: 10px;
     margin-right: 10px;
     cursor: pointer;
+    background-color: black;
+    color: white;
 }
 
