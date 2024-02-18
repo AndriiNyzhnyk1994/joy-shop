@@ -12,6 +12,9 @@ function Cart() {
                 <div className={s.cartInner}>
                     <ul className={s.cartItemsList}>
                         <CartItem />
+                        <CartItem />
+                        <CartItem />
+                        <CartItem />
                     </ul>
                 </div>
             </div>

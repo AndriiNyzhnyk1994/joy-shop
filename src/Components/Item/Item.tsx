@@ -1,4 +1,6 @@
+import { CartItemType, addItem } from '../../redux/slices/cart/slice'
 import { ItemType } from '../../redux/slices/items/slice'
+import { useAppDispatch } from '../../redux/store'
 import s from './Item.module.css'
 
 type ItemPropsType = ItemType
@@ -11,20 +13,31 @@ const Item: React.FC<ItemPropsType> = (props) => {
         price,
         isAviable,
         imageUrl,
-        category,
-        description,
-        rating,
-        reviews
     } = props
 
- const croppedTitle = title.length > 25 ? title.substring(0, 25) + '...' : title
+    const dispatch = useAppDispatch()
+    
+
+    const addToCart = () => {
+        const cartItem: CartItemType = {
+            title,
+            id,
+            imageUrl,
+            price,
+            count: 0
+        }    
+        dispatch(addItem(cartItem))
+    }
+
+    const croppedTitle = title.length > 25 ? title.substring(0, 25) + '...' : title
+
     return (
         <div className={s.item}>
             <img src={imageUrl} alt=" ITEM-IMAGE" />
             <a href='#' className={s.itemTitle}>{croppedTitle}</a>
             <div className={s.priceAndBuy}>
                 <div className={s.price}>{price}</div>
-                <button className={s.addButton}>ADD TO CART</button>
+                <button onClick={addToCart} className={s.addButton}>ADD TO CART</button>
             </div>
         </div>
     )

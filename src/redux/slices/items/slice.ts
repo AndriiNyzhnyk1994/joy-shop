@@ -12,7 +12,7 @@ export type ReviewType = {
 }
 
 export type ItemType = {
-    id: number
+    id: string
     title: string
     price: number
     isAviable: boolean

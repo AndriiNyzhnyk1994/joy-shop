@@ -18,13 +18,14 @@
     width: 30px;
 }
 
-.commonPrice {
+.totalCount {
+    padding: 3px;
     position: absolute;
     margin-left: 20px;
     margin-top: 20px;
     color: black;
-    font-size: 16px;
-    width: 20px;
+    font-size: 15px;
+    min-width: 20px;
     height: 20px;
     background-color: white;
     border: 1px solid black;

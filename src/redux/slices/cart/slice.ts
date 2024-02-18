@@ -23,7 +23,8 @@ const initialState: CartStateType = {
 const calculateTotalPrice = (cartItems: CartItemType[]) => {
     const totalPrice = cartItems.reduce((acc, el) => {
         return (el.count * el.price) + acc
-    }, 0)
+    }
+        , 0)
     return totalPrice
 }
 
@@ -43,7 +44,7 @@ const cartSlice = createSlice({
         },
         minusItem(state, action: PayloadAction<string>) {
             const foundItem = state.items.find(i => i.id === action.payload)
-            if(foundItem) {
+            if (foundItem) {
                 foundItem.count--
             }
             state.totalPrice = calculateTotalPrice(state.items)

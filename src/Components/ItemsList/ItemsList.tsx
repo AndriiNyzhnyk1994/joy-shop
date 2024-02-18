@@ -6,6 +6,7 @@ import { Status, fetchItems } from '../../redux/slices/items/slice'
 import { useEffect } from 'react'
 import loadingIcon from '../../assets/images/loading.png'
 import ErrorBlock from '../Error/Error'
+import { addItem } from '../../redux/slices/cart/slice'
 
 
 const ItemsList: React.FC = () => {
@@ -15,6 +16,8 @@ const ItemsList: React.FC = () => {
         dispatch(fetchItems({ page: '1' }))
         window.scrollTo(0, 0)
     }
+
+
 
     useEffect(() => {
         getItems()
