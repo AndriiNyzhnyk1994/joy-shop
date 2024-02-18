@@ -25,11 +25,13 @@ const Header = () => {
                         <Link to='/cart'>
                             <span className={s.cartIcon}>
                                 <img className={s.cartIconImage} src={cartIcon} alt="Cart" ></img>
-                                <span className={s.totalCount}>
+                                {totalCount ?
+                                 <span className={s.totalCount}>
                                     {totalCount > 99
                                         ? '99+'
                                         : totalCount
-                                    }</span>
+                                    }</span> : ''}
+
                             </span>
                         </Link>
 
