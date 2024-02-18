@@ -1,15 +1,24 @@
 import s from './CartItem.module.css'
 import delIconBlack from '../../assets/images/delete-icon-black.svg'
 import delIconWhite from '../../assets/images/delete-icon-white.svg'
-import { CartItemType } from '../../redux/slices/cart/slice'
+import { CartItemType, addItem, minusItem } from '../../redux/slices/cart/slice'
 import React from 'react'
+import { useAppDispatch } from '../../redux/store'
 
 type PropsType = CartItemType
 
 
 const CartItem: React.FC<PropsType> = (props) => {
-
   const { id, count, imageUrl, price, title } = props
+  const dispatch = useAppDispatch()
+
+  const addCartItem = () => {
+    dispatch(addItem(props))
+  }
+  const minusCartItem = () => {
+    dispatch(minusItem(id))
+  }
+
 
   return (
     <li className={s.cartItem}>
@@ -25,9 +34,12 @@ const CartItem: React.FC<PropsType> = (props) => {
       </div>
       <div className={s.cartItemBottom}>
         <div className={s.countPanel}>
-          <button className={s.countButton}>-</button>
+          <button
+            disabled={count === 1}
+            onClick={minusCartItem}
+            className={`${count === 1 ? s.inactiveButton : ''} ${s.countButton}`}>-</button>
           <input value={count} />
-          <button className={s.countButton}>+</button>
+          <button onClick={addCartItem} className={s.countButton}>+</button>
         </div>
         <div className={s.price}>
           <span>{price * count}</span>

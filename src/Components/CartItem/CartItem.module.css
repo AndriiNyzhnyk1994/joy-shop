@@ -107,6 +107,11 @@
 .countButton:active {
     margin-top: 5px;
 }
+.inactiveButton {
+    color: gray;
+    background-color: lightgray;
+    cursor: default;
+}
 
 .price {
     text-align: center;
