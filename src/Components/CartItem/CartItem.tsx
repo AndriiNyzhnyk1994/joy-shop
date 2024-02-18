@@ -1,7 +1,7 @@
 import s from './CartItem.module.css'
 import delIconBlack from '../../assets/images/delete-icon-black.svg'
 import delIconWhite from '../../assets/images/delete-icon-white.svg'
-import { CartItemType, addItem, minusItem } from '../../redux/slices/cart/slice'
+import { CartItemType, addItem, minusItem, removeItem } from '../../redux/slices/cart/slice'
 import React from 'react'
 import { useAppDispatch } from '../../redux/store'
 
@@ -18,6 +18,11 @@ const CartItem: React.FC<PropsType> = (props) => {
   const minusCartItem = () => {
     dispatch(minusItem(id))
   }
+  const removeCartItem = () => {
+    if (window.confirm('Are you sure you want to delete this?')) {
+      dispatch(removeItem(id))
+    }
+  }
 
 
   return (
@@ -28,7 +33,7 @@ const CartItem: React.FC<PropsType> = (props) => {
         </div>
 
         <p className={s.cartItemTitle}>{title}</p>
-        <button className={s.deleteCartItem}>
+        <button onClick={removeCartItem} className={s.deleteCartItem}>
           <img src={delIconBlack} alt="DEL" />
         </button>
       </div>
