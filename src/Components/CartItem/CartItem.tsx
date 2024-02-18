@@ -18,9 +18,9 @@ function CartItem() {
       </div>
       <div className={s.cartItemBottom}>
         <div className={s.countPanel}>
-          <button>-</button>
+          <button className={s.countButton}>-</button>
           <input value={3} />
-          <button>+</button>
+          <button className={s.countButton}>+</button>
         </div>
         <div className={s.price}>
           <span>{2500}</span>

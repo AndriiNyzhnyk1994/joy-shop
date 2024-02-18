@@ -33,17 +33,26 @@
     display: flex;
     height: 40px;
     margin-left: 10px;
-    cursor: pointer;
     padding: 8px;
-    opacity: 0.3;
     border-radius: 20px;
     transition: background-color 0.6s ease;
 }
+
 .deleteCartItem img {
-    width: 100%;    
+    width: 100%;
+    opacity: 0.3;
+    transition: opacity 0.6s ease;
 }
+
 .deleteCartItem:hover {
     background-color: lightgray;
+}
+
+.deleteCartItem:active {
+    margin-top: 2px;
+}
+
+.deleteCartItem img:hover {
     opacity: 1;
 }
 
@@ -55,21 +64,41 @@
 
 
 .countPanel {
-    width: 250px;
+    width: 130px;
+    height: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 100px;
 }
 
-.countPanel input{
+.countPanel input {
     width: 30px;
     outline: none;
 }
 
-.cartItemBottom button {
+.countButton {
     width: 25px;
     height: 25px;
     margin-left: 10px;
     margin-right: 10px;
-    cursor: pointer;
     background-color: black;
     color: white;
+    border-radius: 20px;
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+    transition: background-color 0.3s ease;
+    font-weight: 600;
 }
 
+.countButton:hover {
+    opacity: 1;
+}
+
+.countButton:active {
+    margin-top: 5px;
+}
+
+.price {
+    margin: auto 0;
+}
