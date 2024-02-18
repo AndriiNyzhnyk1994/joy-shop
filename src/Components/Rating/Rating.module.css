@@ -1,0 +1,13 @@
+
+input[type=radio] {
+    display: none;
+}
+
+.star {
+    cursor: pointer;
+}
+
+.ratingValue {
+    font-size: 14px;
+    text-align: center;
+}
