@@ -3,6 +3,7 @@ import { ItemType } from '../../redux/slices/items/slice'
 import { useAppDispatch } from '../../redux/store'
 import s from './Item.module.css'
 import RatingScreen from '../Rating/RatingScreen'
+import { Link } from 'react-router-dom'
 
 type ItemPropsType = ItemType
 
@@ -34,8 +35,10 @@ const Item: React.FC<ItemPropsType> = (props) => {
 
     return (
         <div className={s.item}>
-            <img src={imageUrl} alt=" ITEM-IMAGE" />
-            <a href='#' className={s.itemTitle}>{croppedTitle}</a>
+            <Link to={`/element/${id}`}>
+                <img src={imageUrl} alt="ITEM-IMAGE" />
+                <span className={s.itemTitle}>{croppedTitle}</span>
+            </Link>
             <RatingScreen rating={rating} />
             <div className={s.priceAndBuy}>
                 <div className={s.price}>{price}</div>

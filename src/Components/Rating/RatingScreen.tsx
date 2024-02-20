@@ -6,14 +6,13 @@ import React, { useState } from 'react'
 type PropsType = {
     rating: number
 }
-
+ 
 const RatingScreen:React.FC<PropsType> = ({rating}) => {
 
 
 
     return (
         <div className={s.rating}>
-
             <div className={s.stars}>
                 {
                     [...Array(5)].map((el, index) => {
@@ -27,7 +26,7 @@ const RatingScreen:React.FC<PropsType> = ({rating}) => {
                                 <FaStar
                                     color={currentRating <= rating ? '#ffc107' : 'e4e5e9'}
                                     className={s.star}
-                                    size={20}
+                                    size={16}
                                 />
                             </label>
                         )

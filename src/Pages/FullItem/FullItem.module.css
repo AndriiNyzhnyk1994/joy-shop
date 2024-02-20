@@ -1,0 +1,9 @@
+.itemRating {
+    display: flex;
+    justify-content: space-between;
+}
+
+.itemCode {
+    font-size: 15px;
+    color: grey;
+}

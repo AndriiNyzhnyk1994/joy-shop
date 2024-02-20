@@ -1,4 +1,10 @@
 
+
+.rating {
+    width: 100px;
+    text-align: center;
+}
+
 input[type=radio] {
     display: none;
 }
@@ -8,6 +14,6 @@ input[type=radio] {
 }
 
 .ratingValue {
-    font-size: 14px;
+    font-size: 13px;
     text-align: center;
 }
