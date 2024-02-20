@@ -39,7 +39,7 @@ const Item: React.FC<ItemPropsType> = (props) => {
                 <img src={imageUrl} alt="ITEM-IMAGE" />
                 <span className={s.itemTitle}>{croppedTitle}</span>
             </Link>
-            <RatingScreen rating={rating} />
+            <RatingScreen showNumber={true} starSize={16} rating={rating} />
             <div className={s.priceAndBuy}>
                 <div className={s.price}>{price}</div>
                 <button onClick={addToCart} className={s.addButton}>ADD TO CART</button>

@@ -5,9 +5,11 @@ import React, { useState } from 'react'
 
 type PropsType = {
     rating: number
+    showNumber: boolean
+    starSize: number
 }
- 
-const RatingScreen:React.FC<PropsType> = ({rating}) => {
+
+const RatingScreen: React.FC<PropsType> = ({ rating, showNumber, starSize }) => {
 
 
 
@@ -26,13 +28,16 @@ const RatingScreen:React.FC<PropsType> = ({rating}) => {
                                 <FaStar
                                     color={currentRating <= rating ? '#ffc107' : 'e4e5e9'}
                                     className={s.star}
-                                    size={16}
+                                    size={starSize}
                                 />
                             </label>
                         )
                     })
                 }
-                <div className={s.ratingValue}>Rating is {rating}</div>
+                {showNumber
+                    ? <div className={s.ratingValue}>Rating is {rating}</div>
+                    : ''
+                }
             </div>
         </div>
     )

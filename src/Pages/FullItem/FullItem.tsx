@@ -10,7 +10,7 @@ const FullItem = () => {
                     <div className={s.itemTopInfo}>
                         <h2 className={s.itemTitle}>ITEM TITLE</h2>
                         <div className={s.itemRating}>
-                            <RatingScreen rating={4}/>
+                            <RatingScreen showNumber={false} starSize={16} rating={4}/>
                             <span className={s.reviewsLink}>1 review</span>
                             <span className={s.itemCode}>Code: 338500994</span>
                         </div>
