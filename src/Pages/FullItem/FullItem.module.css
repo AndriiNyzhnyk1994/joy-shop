@@ -18,3 +18,8 @@
 .reviewsLink:hover {
     color: brown;
 }
+
+.itemMainInfo {
+    display: flex;
+    margin-top: 20px;
+}

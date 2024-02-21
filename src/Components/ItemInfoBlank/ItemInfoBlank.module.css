@@ -1,0 +1,43 @@
+.itemBlank {
+    min-height: 500px;
+    background-color: antiquewhite;
+    width: 700px;
+}
+.itemBlank ul {
+    width: 100%;
+}
+
+.blankListItem {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 10px;
+}
+.blankKey {
+    width: 50%;
+    font-size: 16px;
+    display: flex;
+    flex-wrap: nowrap;
+    white-space: nowrap;
+}
+.restSpace {
+    margin-left: 5px;
+    height: 17px;
+    width: 100%;
+    border-bottom: 1px solid lightgrey;
+}
+
+
+.blankValueBlock {
+    width: 50%;
+    font-size: 16px;
+    margin-left: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.blankValue {
+    color: gray;
+    display: block;
+}
+

@@ -11,8 +11,6 @@ type PropsType = {
 
 const RatingScreen: React.FC<PropsType> = ({ rating, showNumber, starSize }) => {
 
-
-
     return (
         <div className={s.rating}>
             <div className={s.stars}>
