@@ -1,93 +1,29 @@
-.itemRating {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 20px;
-}
 
-.itemCode {
-    font-size: 15px;
-    color: grey;
-}
-.reviewsLink {
-    font-size: 15px;
-    margin-right: auto;
-    margin-left: 10px;
-    margin-top: 4px;
-    cursor: pointer;
-}
-.reviewsLink:hover {
-    color: brown;
-}
-
-.itemMainInfo {
-    display: flex;
-    margin-top: 20px;
-}
-
-.purchaseInfo {
-    max-width: 500px;
-    margin-left: 20px;
-}
-.titleAndImage {
-    height: 150px;
-    border-radius: 10px;
-    box-sizing: border-box;
-    display: flex;
-    justify-content: space-between;
-    padding: 10px;
-    border: 1px solid lightgray;
-}
-
-.itemImage {
-    object-fit: contain;
-    width: 120px;
-}
-
-.itemTitle {
-    margin: auto 0;
-    padding-left: 20px;
-    font-size: 16px;
-}
-
-.purchaseMainBlock {
-    box-sizing: border-box;
-    padding: 10px;
-    margin-top: 10px;
-    border: 1px solid lightgray;
-    border-radius: 10px;
-}
-
-.sellerInfo {
+.itemNavBlock {
     width: 100%;
-    font-size: 16px;
-    height: 30px;
     border-bottom: 1px solid lightgray;
-}
-.sellerInfo a:hover {
-    color: brown;
-}
-
-.priceAndFavorites {
-    display: flex;
-    justify-content: space-between;
-}
-
-.priceInfo {
-    display: flex;
-    flex-direction: column;
-}
-
-.favoritesBtn {
-    background-color: transparent;
-}
-
-.favoritesIcon {
-    width: 40px;
     height: 40px;
 }
+.itemNavList {
+    display: flex;
+}
+.itemNavElement {
+    box-sizing: border-box;
+    height: 100%;
+    margin-right: 10px;
+    margin-left: 10px;
+    padding: 5px;
+}
+.itemNavBtn {
+    font-size: 16px;
+}
 
+.itemNavElement:hover {
+    border-bottom: 3px solid brown;
+}
 
-
-
+.itemNavBtn:hover {
+    color: brown;
+}
 
 

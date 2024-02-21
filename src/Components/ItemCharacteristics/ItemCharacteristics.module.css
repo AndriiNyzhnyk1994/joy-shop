@@ -1,0 +1,165 @@
+.itemRating {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.itemCode {
+    font-size: 15px;
+    color: grey;
+}
+.reviewsLink {
+    font-size: 15px;
+    margin-right: auto;
+    margin-left: 10px;
+    margin-top: 4px;
+    cursor: pointer;
+}
+.reviewsLink:hover {
+    color: brown;
+}
+
+.itemMainInfo {
+    display: flex;
+    margin-top: 20px;
+}
+
+.purchaseInfo {
+    max-width: 500px;
+    margin-left: 20px;
+}
+.titleAndImage {
+    height: 150px;
+    border-radius: 10px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    border: 1px solid lightgray;
+}
+
+.itemImage {
+    object-fit: contain;
+    width: 120px;
+}
+
+.itemTitle {
+    margin: auto 0;
+    padding-left: 20px;
+    font-size: 16px;
+}
+
+.purchaseMainBlock {
+    box-sizing: border-box;
+    padding: 20px;
+    margin-top: 10px;
+    border: 1px solid lightgray;
+    border-radius: 10px;
+}
+
+.sellerInfo {
+    width: 100%;
+    font-size: 16px;
+    height: 30px;
+    border-bottom: 1px solid lightgray;
+}
+.sellerInfo a:hover {
+    color: brown;
+}
+
+.priceAndFavorites {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.priceInfo {
+    display: flex;
+    flex-direction: column;
+    font-size: 30px;
+    font-weight: 400;
+}
+
+.aviabile {
+    font-size: 13px;
+    color: green;
+}
+
+
+.favoritesBtn {
+    background-color: transparent;
+}
+
+.favoritesIcon {
+    width: 40px;
+    height: 40px;
+}
+
+
+
+.buyButtons {
+    margin-top: 20px;
+    width: 100;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.buyBtn {
+    border-radius: 10px;
+    width: 90%;
+    color: white;
+    font-size: 18px;
+    height: 40px;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.buyBtn img {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;   
+}
+
+.buyBtn:hover {
+    opacity: 0.8;
+}
+
+.buyBtn:active {
+    background-color: white;
+    color: black;
+    opacity: 1;
+}
+
+.buyInCredit {
+    margin-top: 10px;
+    color: black;
+    background-color: white;
+    border: 1px solid black;
+}
+.buyInCredit:active {
+    opacity: 1;
+    background-color: black;
+    color: white
+}
+
+.bonusInfoBlock {
+    margin-top: 20px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+    border-top: 1px solid lightgray;
+    padding-top: 10px;
+}
+
+.bonusIcon {
+    width: 25px;
+    height: 25px;
+}
+
+.bonusText {
+    margin-left: 10px;
+}
