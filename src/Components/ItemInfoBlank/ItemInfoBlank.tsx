@@ -21,8 +21,6 @@ function ItemInfoBlank(props: PropsType) {
 
                         const blankKey = Object.keys(i)[0]
                         const blankValues = Object.values(i)
-
-                        console.log(blankValues);
                         
                         return (
                             <li key={blankKey} className={s.blankListItem}>
@@ -31,7 +29,7 @@ function ItemInfoBlank(props: PropsType) {
                                     <span className={s.restSpace}></span></span>
                                 <div className={s.blankValueBlock}>
                                     {
-                                        blankValues.map(value => <a className={s.blankValue} href="#">{value}</a>)
+                                        blankValues[0].map(value => <a key={value} className={s.blankValue} href="#">{value}</a>)
                                     }
                                 </div>
 
