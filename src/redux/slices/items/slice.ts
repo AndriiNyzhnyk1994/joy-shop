@@ -42,7 +42,7 @@ export const fetchItems = createAsyncThunk<ItemType[], FetchItemsArgsType>(
     'items/fetchItems',
     async (params) => {
         const {page} = params
-        const {data} = await axios.get<ItemType[]>(`https://653db286f52310ee6a9a45a9.mockapi.io/elements`)
+        const {data} = await axios.get<ItemType[]>(`https://65c3cdbc4ac991e8059b1449.mockapi.io/items`)
         return data
     }
 

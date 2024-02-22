@@ -12,7 +12,7 @@ type PropsType = {
 function ItemInfoBlank(props: PropsType) {
 
     const { data } = props
-
+    
     return (
         <div className={s.itemBlank}>
             <ul>

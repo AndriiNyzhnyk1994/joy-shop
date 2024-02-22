@@ -7,6 +7,7 @@ import { ItemType } from '../../redux/slices/items/slice'
 import { CartItemType, addItem } from '../../redux/slices/cart/slice'
 import axios from 'axios'
 import { error } from 'console'
+import { BlankItemType } from '../../Components/ItemInfoBlank/ItemInfoBlank'
 
 
 export enum NavStatusType {
@@ -16,6 +17,21 @@ export enum NavStatusType {
     Photo = 'Фото'
 }
 
+export type ReviewType = {
+    name: string
+    text: string
+    rate: string
+}
+
+export type ItemInfoType = {
+    characteristics: BlankItemType[]
+    description: string
+    id: string
+    photos: string[]
+    reviews: ReviewType[]
+}
+
+export type FullItemType = ItemInfoType & ItemType
 
 const FullItem: React.FC = () => {
 
@@ -23,7 +39,8 @@ const FullItem: React.FC = () => {
     const navigate = useNavigate()
     const {id} = useParams()
 
-    const [itemData, setItemData] = useState<ItemType | null>(null)
+    const [itemData, setItemData] = useState<FullItemType | null>(null)
+    
 
     const onAddItem = () => {
         
@@ -43,8 +60,10 @@ const FullItem: React.FC = () => {
     useEffect(() => {
         async function fetchItem() {
             try{
-                const {data} = await axios.get(`https://653db286f52310ee6a9a45a9.mockapi.io/elements/${id}`)
-                setItemData(data)
+                const itemData = await axios.get(`https://65c3cdbc4ac991e8059b1449.mockapi.io/items/${id}`)
+                const itemInfo = await axios.get(`https://65c3cdbc4ac991e8059b1449.mockapi.io/items-info/${id}`)
+                
+                setItemData({...itemData.data, ...itemInfo.data})
             } catch(error) {
                 alert('Error: ' + error)
                 navigate('/')
@@ -78,7 +97,7 @@ const FullItem: React.FC = () => {
                     </nav>
                     <div className={s.fullItemInner}>
                         {activeNav === NavStatusType.Characteristics
-                            ? <ItemCharacteristics itemData={itemData} onAddItem={onAddItem}  />
+                            ? <ItemCharacteristics fullItemData={itemData} onAddItem={onAddItem}  />
                             : ''
                         }
 

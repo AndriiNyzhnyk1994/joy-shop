@@ -6,80 +6,56 @@ import cartIcon from '../../assets/images/cart.svg'
 import bonusIcon from '../../assets/images/bonusIcon.svg'
 import favoritesIcon from '../../assets/images/favorite.svg'
 import favoritesAddedIcon from '../../assets/images/favorite-added.svg'
-import { CartItemType } from '../../redux/slices/cart/slice'
-import { ItemType } from '../../redux/slices/items/slice'
+import { FullItemType } from '../../Pages/FullItem/FullItem'
 
-
-const itemBlankData: BlankItemType[] = [
-    { 'Количество клавиш': ['87'] },
-    { 'Подключение': ['Беспроводное', 'Проводное'] },
-    { 'Тип упаковки': ['Retail'] },
-    { 'Особенности': ['Индикатор уровня заряда'] },
-    { 'Тип клавиатуры': ['Механические'] },
-    { 'Раскладка': ['ENG / UKR'] },
-    { 'Интерфейс': ['Blutooth', 'USB адаптер 2,4ГГц'] },
-    { 'Форма': ['Без цифрового блока'] },
-    { 'Вид механических переключателей': ['Тактильные'] },
-    { 'Вид клавиатуры': ['Стандартная'] },
-    { 'Назначение': ['Для настольного ПК'] },
-    {
-        'Совместимость с ОС': [
-            'Android', 'Chrome OS', 'Mac OS',
-            'iOS', 'iPadOS', 'Microsoft Windows'
-        ]
-    },
-    { 'Корпус': ['Пластиковый'] },
-    {
-        'Комплектация': [
-            'Клавиатура', '2 батареи типа AAА (установлены в устройство)',
-            'USB-приемник Logi Bolt 4', 'Дополнительные клавиши эмодзи',
-            'Документация пользователя'
-        ]
-    },
-    { 'Гарантия': ['24 месяца официальной гарантии от производителя'] },
-    { 'Страна регистрации бренда': ['Швейцария'] },
-    { 'Страна-производитель': ['Китай'] },
-]
 
 
 type PropsType = {
     onAddItem: () => void
-    itemData: ItemType | null
+    fullItemData: FullItemType | null
 }
 
 
-const ItemCharacteristics:React.FC<PropsType> = ({onAddItem, itemData}) => {
+const ItemCharacteristics:React.FC<PropsType> = ({onAddItem, fullItemData}) => {
 
     
 
     const [isFavorite, setIsFavorite] = useState(false)
+    
+    console.log(fullItemData?.rating);
+    
 
     return (
-        itemData
+        fullItemData
         ? <>
             <div className={s.itemTopInfo}>
-                <h2 className={s.itemTopTitle}>{itemData?.title}</h2>
+                <h2 className={s.itemTopTitle}>{fullItemData.title}</h2>
                 <div className={s.itemRating}>
-                    <RatingScreen showNumber={false} starSize={16} rating={itemData.rating} />
-                    <span className={s.reviewsLink}>{itemData.reviews.length} reviews</span>
+                    <RatingScreen showNumber={false} starSize={16} rating={fullItemData.rating} />
+                    <span className={s.reviewsLink}>{fullItemData.reviews.length} reviews</span>
                     <span className={s.itemCode}>Code: 338500994</span>
                 </div>
             </div>
             <div className={s.itemMainInfo}>
-                        <ItemInfoBlank data={itemBlankData} />
+                        <ItemInfoBlank data={fullItemData.characteristics} />
                         <div className={s.purchaseInfo}>
                             <div className={s.titleAndImage}>
                                 <div className={s.itemImageBlock}>
-                                    <img className={s.itemImage} src={itemData.imageUrl} alt="Item Photo" />
+                                    <img className={s.itemImage} src={fullItemData.imageUrl} alt="Item Photo" />
                                     </div>
-                                <p className={s.itemTitle}>{itemData.title}</p>
+                                <p className={s.itemTitle}>{fullItemData.title}</p>
                             </div>
                             <div className={s.purchaseMainBlock}>
                                 <div className={s.sellerInfo}>Продавец: <a href="#">JOY SHOP</a></div>
                                 <div className={s.priceAndFavorites}>
                                     <div className={s.priceInfo}>
-                                        <h3>{itemData.price}</h3>
-                                        <span className={s.aviabile}>Есть в наличии</span>
+                                        <h3>{fullItemData.price}</h3>
+                                        {
+                                            fullItemData.isAviable
+                                                ? <span className={s.aviabile}>Есть в наличии</span>
+                                                : <span className={s.notAviabile}>Нет в наличии</span>
+                                        }
+                                        
                                     </div>
                                     <button onClick={() => { setIsFavorite((state) => !state) }} className={s.favoritesBtn}>
                                         {
