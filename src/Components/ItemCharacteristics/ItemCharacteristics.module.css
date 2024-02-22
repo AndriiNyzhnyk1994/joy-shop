@@ -22,14 +22,16 @@
 .itemMainInfo {
     display: flex;
     margin-top: 20px;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
 .purchaseInfo {
-    max-width: 500px;
+    max-width: 400px;
     margin-left: 20px;
 }
 .titleAndImage {
-    height: 150px;
+    min-height: 150px;
     border-radius: 10px;
     box-sizing: border-box;
     display: flex;
@@ -37,7 +39,7 @@
     padding: 20px;
     border: 1px solid lightgray;
 }
-
+ 
 .itemImage {
     object-fit: contain;
     width: 120px;

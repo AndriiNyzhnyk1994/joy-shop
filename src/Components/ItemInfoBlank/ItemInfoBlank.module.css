@@ -1,7 +1,13 @@
 .itemBlank {
     min-height: 500px;
     background-color: transparent;
-    width: 700px;
+    max-width: 800px;
+    min-width: 550px;
+}
+@media (max-width: 1080px) {
+    .itemBlank {
+        width: 100%;
+    }
 }
 .itemBlank ul {
     width: 100%;
@@ -11,8 +17,9 @@
     width: 100%;
     display: flex;
     justify-content: flex-start;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 }
+
 .blankKey {
     width: 50%;
     font-size: 16px;

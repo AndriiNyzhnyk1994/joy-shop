@@ -24,9 +24,10 @@ function ItemInfoBlank(props: PropsType) {
                         
                         return (
                             <li key={blankKey} className={s.blankListItem}>
-                                <span className={s.blankKey}>
-                                    <span>{blankKey}</span>
-                                    <span className={s.restSpace}></span></span>
+                                <div className={s.blankKey}>
+                                    <span className={s.blankKeyTitle}>{blankKey}</span>
+                                    <span className={s.restSpace}></span>
+                                    </div>
                                 <div className={s.blankValueBlock}>
                                     {
                                         blankValues[0].map(value => <a key={value} className={s.blankValue} href="#">{value}</a>)
