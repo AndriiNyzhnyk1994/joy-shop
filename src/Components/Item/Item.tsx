@@ -4,6 +4,7 @@ import { useAppDispatch } from '../../redux/store'
 import s from './Item.module.css'
 import RatingScreen from '../Rating/RatingScreen'
 import { Link } from 'react-router-dom'
+import { cropString } from '../../utils/cropString'
 
 type ItemPropsType = ItemType
 
@@ -31,11 +32,12 @@ const Item: React.FC<ItemPropsType> = (props) => {
         dispatch(addItem(cartItem))
     }
 
-    const croppedTitle = title.length > 25 ? title.substring(0, 25) + '...' : title
+    const croppedTitle = cropString(title, 30)
+
 
     return (
         <div className={s.item}>
-            <Link to={`/element/${id}`}>
+            <Link className={s.imageAndTitle} to={`/element/${id}`}>
                 <img src={imageUrl} alt="ITEM-IMAGE" />
                 <span className={s.itemTitle}>{croppedTitle}</span>
             </Link>
