@@ -40,7 +40,7 @@ const Item: React.FC<ItemPropsType> = (props) => {
         <div className={s.item}>
             <Link className={s.imageAndTitle} to={`/element/${id}`}>
                 <img src={imageUrl} alt="ITEM-IMAGE" />
-                <span className={s.itemTitle}>{croppedTitle}</span>
+                <span title={title} className={s.itemTitle}>{croppedTitle}</span>
             </Link>
             <IsAviable isAviable={isAviable}/>
             <RatingScreen showNumber={true} starSize={16} rating={rating} />
