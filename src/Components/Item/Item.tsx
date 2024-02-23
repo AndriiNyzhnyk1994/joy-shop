@@ -5,9 +5,10 @@ import s from './Item.module.css'
 import RatingScreen from '../Rating/RatingScreen'
 import { Link } from 'react-router-dom'
 import { cropString } from '../../utils/cropString'
+import IsAviable from '../../assets/IsAviable/IsAviable'
 
 type ItemPropsType = ItemType
-
+ 
 
 const Item: React.FC<ItemPropsType> = (props) => {
     const {
@@ -41,6 +42,7 @@ const Item: React.FC<ItemPropsType> = (props) => {
                 <img src={imageUrl} alt="ITEM-IMAGE" />
                 <span className={s.itemTitle}>{croppedTitle}</span>
             </Link>
+            <IsAviable isAviable={isAviable}/>
             <RatingScreen showNumber={true} starSize={16} rating={rating} />
             <div className={s.priceAndBuy}>
                 <div className={s.price}>{price}</div>

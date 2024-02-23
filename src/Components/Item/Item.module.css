@@ -1,9 +1,9 @@
 .item {
     box-sizing: border-box;
     width: 210px;
-    height: 400px;
+    height: 380px;
     overflow: hidden;
-    border: 1px solid black;
+    border: 1px solid lightgray;
     padding: 10px;
     margin-left: 10px;
     margin-right: 10px;
@@ -13,7 +13,12 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    transition: border 0.3s ease-out;
 }
+.item:hover {
+    border: 1px solid lightcoral;
+}
+
 .item img {
     max-width: 100%;
     height: 200px;
