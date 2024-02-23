@@ -6,7 +6,7 @@ import { Status, fetchItems } from '../../redux/slices/items/slice'
 import { useEffect } from 'react'
 import loadingIcon from '../../assets/images/loading.png'
 import ErrorBlock from '../Error/Error'
-import { addItem } from '../../redux/slices/cart/slice'
+import { addNewItem } from '../../redux/thunks/addItem'
 
 
 const ItemsList: React.FC = () => {
@@ -17,6 +17,9 @@ const ItemsList: React.FC = () => {
         window.scrollTo(0, 0)
     }
 
+    // const onAddNewItem = () => {
+    //     dispatch(addNewItem())
+    // }
 
 
     useEffect(() => {

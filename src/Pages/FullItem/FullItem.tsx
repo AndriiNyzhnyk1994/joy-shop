@@ -23,15 +23,20 @@ export type ReviewType = {
     rate: string
 }
 
-export type ItemInfoType = {
+export type ItemFullInfoType = {
     characteristics: BlankItemType[]
-    description: string
     id: string
     photos: string[]
-    reviews: ReviewType[]
+    title: string
+    price: number
+    isAviable: boolean
+    imageUrl: string
+    category: string
+    description: string
+    rating: number
+    reviews: ReviewType[] 
 }
 
-export type FullItemType = ItemInfoType & ItemType
 
 const FullItem: React.FC = () => {
 
@@ -39,7 +44,7 @@ const FullItem: React.FC = () => {
     const navigate = useNavigate()
     const {id} = useParams()
 
-    const [itemData, setItemData] = useState<FullItemType | null>(null)
+    const [itemData, setItemData] = useState<ItemFullInfoType | null>(null)
     
 
     const onAddItem = () => {
@@ -60,10 +65,8 @@ const FullItem: React.FC = () => {
     useEffect(() => {
         async function fetchItem() {
             try{
-                const itemData = await axios.get(`https://65c3cdbc4ac991e8059b1449.mockapi.io/items/${id}`)
-                const itemInfo = await axios.get(`https://65c3cdbc4ac991e8059b1449.mockapi.io/items-info/${id}`)
-                
-                setItemData({...itemData.data, ...itemInfo.data})
+                const {data} = await axios.get(`https://65c3cdbc4ac991e8059b1449.mockapi.io/items-info/${id}`)                
+                setItemData(data)
             } catch(error) {
                 alert('Error: ' + error)
                 navigate('/')

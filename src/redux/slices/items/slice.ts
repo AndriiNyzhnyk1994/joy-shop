@@ -1,5 +1,6 @@
 import { PayloadAction, createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import axios from 'axios'
+import { addNewItem } from "../../thunks/addItem";
 
 export enum Status {
     LOADING = 'loading',
@@ -18,9 +19,7 @@ export type ItemType = {
     isAviable: boolean
     imageUrl: string
     category: string
-    description: string
     rating: number
-    reviews: ReviewType[] 
 }
 export type ItemsStateType = {
     items: ItemType[]
@@ -69,6 +68,17 @@ const itemsSlice = createSlice({
             .addCase(fetchItems.rejected, (state) => {
                 state.items = []
                 state.status = Status.ERROR
+            })
+            .addCase(addNewItem.pending, (state, action) => {
+                state.status = Status.LOADING
+            })
+            .addCase(addNewItem.fulfilled, (state, action) => {
+                state.status = Status.SUCCESS
+                state.items.push(action.payload)
+            })
+            .addCase(addNewItem.rejected, (state, action) => {
+                state.status = Status.ERROR
+                state.items = []
             })
     }
 })

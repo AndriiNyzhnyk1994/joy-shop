@@ -6,13 +6,13 @@ import cartIcon from '../../assets/images/cart.svg'
 import bonusIcon from '../../assets/images/bonusIcon.svg'
 import favoritesIcon from '../../assets/images/favorite.svg'
 import favoritesAddedIcon from '../../assets/images/favorite-added.svg'
-import { FullItemType } from '../../Pages/FullItem/FullItem'
+import { ItemFullInfoType } from '../../Pages/FullItem/FullItem'
 
 
 
 type PropsType = {
     onAddItem: () => void
-    fullItemData: FullItemType | null
+    fullItemData: ItemFullInfoType | null
 }
 
 
