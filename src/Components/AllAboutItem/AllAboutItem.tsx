@@ -31,7 +31,9 @@ const AllAboutItem: React.FC<PropsType> = ({itemData}) => {
                         <ImagesSlider images={photos} />
                 </div>
             </div>
-            <div className={s.aboutRight}></div>
+            <div className={s.aboutRight}>
+                
+            </div>
         </div>
     )
 }

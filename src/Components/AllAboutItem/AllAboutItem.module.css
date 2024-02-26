@@ -1,12 +1,7 @@
 
 
-.allAboutItem {
-    width: 100%;
-    min-height: 500px;
-}
 
 .aboutLeft {
-    background-color: aqua;
     width: 50%;
     padding-right: 24px;
     box-sizing: border-box;
@@ -18,3 +13,5 @@
     padding-left: 24px;
     box-sizing: border-box;
 }
+
+/* Стилизация основного элемента scrollbar */
