@@ -22,9 +22,6 @@ const ItemCharacteristics:React.FC<PropsType> = ({onAddItem, fullItemData}) => {
     
 
     const [isFavorite, setIsFavorite] = useState(false)
-    
-    console.log(fullItemData?.rating);
-    
 
     return (
         fullItemData
