@@ -25,7 +25,7 @@ const ItemCharacteristics:React.FC<PropsType> = ({onAddItem, fullItemData}) => {
 
     return (
         fullItemData
-        ? <>
+        ? <div className={s.wrapper}>
             <div className={s.itemTopInfo}>
                 <h2 className={s.itemTopTitle}>{fullItemData.title}</h2>
                 <div className={s.itemRating}>
@@ -77,7 +77,7 @@ const ItemCharacteristics:React.FC<PropsType> = ({onAddItem, fullItemData}) => {
                             </div>
                         </div>
                     </div>
-        </>
+        </div>
         : <></>
     )
 }
