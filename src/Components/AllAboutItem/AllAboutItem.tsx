@@ -5,7 +5,7 @@ import s from './AllAboutItem.module.css'
 function AllAboutItem() {
   return (
     <div className={s.AllAboutItem}>
-
+        
     </div>
   )
 }
