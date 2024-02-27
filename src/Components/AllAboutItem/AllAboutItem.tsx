@@ -41,7 +41,7 @@ const AllAboutItem: React.FC<PropsType> = ({ itemData }) => {
                 </div>
                 <div className={s.buyOptions}>
                     <div className={s.priceAndAviable}>
-                        <h3 className={s.price}>{price}</h3>
+                        <span className={s.price}>{price}</span>
                         <IsAviable isAviable={isAviable} />
                     </div>
                     <button className={s.buyBtn}>

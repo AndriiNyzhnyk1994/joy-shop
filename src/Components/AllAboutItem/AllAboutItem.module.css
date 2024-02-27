@@ -10,7 +10,6 @@
 }
 
 .aboutRight {
-    background-color: bisque;
     width: 50%;
     padding-left: 24px;
     box-sizing: border-box;
@@ -27,17 +26,19 @@
 }
 
 .buyOptions {
-    background-color: chocolate;
     display: flex;
+    align-items: end;
+    box-sizing: border-box;
+    padding-bottom: 10px;
 }
 
 .priceAndAviable {
     text-align: center;
-    background-color: aqua;
     width: 100px;
 }
 
 .price {
+    display: block;
     font-weight: 500;
     font-size: 30px;
 }
@@ -52,6 +53,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-left: 10px;
+    margin-right: 20px;
 }
 
 .buyBtn img {
