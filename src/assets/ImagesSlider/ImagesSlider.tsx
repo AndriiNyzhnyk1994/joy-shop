@@ -11,6 +11,8 @@ const ImagesSlider: React.FC<PropsType> = ({ images }) => {
     const handleThumbnailClick = (index: number) => {
         setSelectedImageIndex(index);
     };
+    
+
 
     return (
         <div className={s.slideWrapper} >
