@@ -1,5 +1,7 @@
 
-
+.allAboutItem {
+    display: flex;
+}
 
 .aboutLeft {
     width: 50%;
@@ -8,9 +10,62 @@
 }
 
 .aboutRight {
-    background-color: blueviolet;
+    background-color: bisque;
     width: 50%;
     padding-left: 24px;
     box-sizing: border-box;
 }
 
+.titleBlock {
+    width: 100%;
+    min-height: 80px;
+}
+
+.title {
+    font-weight: 500;
+    font-size: 25px;
+}
+
+.buyOptions {
+    background-color: chocolate;
+    display: flex;
+}
+
+.priceAndAviable {
+    text-align: center;
+    background-color: aqua;
+    width: 100px;
+}
+
+.price {
+    font-weight: 500;
+    font-size: 30px;
+}
+
+.buyBtn {
+    border-radius: 10px;
+    width: 120px;
+    color: white;
+    font-size: 15px;
+    height: 40px;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.buyBtn img {
+    width: 25px;
+    height: 25px;
+    margin-right: 10px;   
+}
+
+.buyBtn:hover {
+    opacity: 0.8;
+}
+
+.buyBtn:active {
+    background-color: white;
+    color: black;
+    opacity: 1;
+}

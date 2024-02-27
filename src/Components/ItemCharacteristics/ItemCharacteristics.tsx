@@ -8,6 +8,7 @@ import favoritesIcon from '../../assets/images/favorite.svg'
 import favoritesAddedIcon from '../../assets/images/favorite-added.svg'
 import { ItemFullInfoType } from '../../Pages/FullItem/FullItem'
 import IsAviable from '../../assets/IsAviable/IsAviable'
+import Favorites from '../../assets/favorites/Favorites'
 
 
 
@@ -50,13 +51,7 @@ const ItemCharacteristics:React.FC<PropsType> = ({onAddItem, fullItemData}) => {
                                         <h3>{fullItemData.price}</h3>
                                         <IsAviable isAviable={fullItemData.isAviable}/>                                        
                                     </div>
-                                    <button onClick={() => { setIsFavorite((state) => !state) }} className={s.favoritesBtn}>
-                                        {
-                                            isFavorite
-                                                ? <img className={s.favoritesIcon} src={favoritesAddedIcon} alt="To Favorites" />
-                                                : <img className={s.favoritesIcon} src={favoritesIcon} alt="To Favorites" />
-                                        }
-                                    </button>
+                                    <Favorites />
                                 </div>
                                 <div className={s.buyButtons}>
                                     <button onClick={onAddItem} className={s.buyBtn}>
