@@ -13,7 +13,7 @@ const ImagesSlider: React.FC<PropsType> = ({ images }) => {
     };
     
 
-
+  
     return (
         <div className={s.slideWrapper} >
             <div className={s.sliderInner} >

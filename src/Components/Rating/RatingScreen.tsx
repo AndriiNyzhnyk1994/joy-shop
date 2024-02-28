@@ -18,7 +18,7 @@ const RatingScreen: React.FC<PropsType> = ({ rating, showNumber, starSize }) => 
                     [...Array(5)].map((el, index) => {
                         const currentRating = index + 1
                         return (
-                            <label>
+                            <label key={index}>
                                 <input
                                     type="radio"
                                     name='rating'

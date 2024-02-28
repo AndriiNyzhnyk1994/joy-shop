@@ -7,6 +7,7 @@ import cartIcon from '../../assets/images/cart.svg'
 import favoritesIcon from '../../assets/images/favorite.svg'
 import favoritesAddedIcon from '../../assets/images/favorite-added.svg'
 import Favorites from '../../assets/favorites/Favorites'
+import AdvancedRating from '../../assets/AdvancedRating/AdvancedRating'
 
 type PropsType = {
     itemData: ItemFullInfoType
@@ -50,6 +51,7 @@ const AllAboutItem: React.FC<PropsType> = ({ itemData }) => {
                     </button>
                     <Favorites/>
                 </div>
+            <AdvancedRating value={3.5}/>
             </div>
         </div>
     )
