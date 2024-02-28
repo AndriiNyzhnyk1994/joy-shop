@@ -51,7 +51,7 @@ const AllAboutItem: React.FC<PropsType> = ({ itemData }) => {
                     </button>
                     <Favorites/>
                 </div>
-            <AdvancedRating value={3.5}/>
+            <AdvancedRating value={3.4}/>
             </div>
         </div>
     )

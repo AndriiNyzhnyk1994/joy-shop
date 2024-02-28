@@ -3,19 +3,12 @@ import s from './AdvancedRating.module.css'
 import './AdvancedRating.css'
 
 
-function AdvancedRating({value}) {
+function AdvancedRating({ value }) {
 
-   
-    const [widthValue, setWidthValue] = useState(value)
-    useEffect(() => {
-        // меняем ширину активных звёзд
-        const setRatingActiveWidth = (index = value) => {
-            const ratingActiveWidth = index / 0.05
-            setWidthValue(ratingActiveWidth)
-        }
-
-        setRatingActiveWidth()
-    }, [])
+    const [widthValue, setWidthValue] = useState(() => {
+        const ratingActiveWidth = value / 0.05
+        return ratingActiveWidth
+    })
 
 
     return (
