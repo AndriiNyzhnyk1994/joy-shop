@@ -26,6 +26,13 @@
     border-bottom: 3px solid brown;
 }
 
+.activeNav {
+    border-bottom: 3px solid brown;
+}
+.activeNavButton {
+    color: brown;
+}
+
 .itemNavBtn:hover {
     color: brown;
 }

@@ -38,6 +38,8 @@ export type ItemFullInfoType = {
 }
 
 
+const navValues = ['Характеристики', 'Всё о товаре', 'Отзывы', 'Фото'] as NavStatusType[]
+
 const FullItem: React.FC = () => {
 
     const dispatch = useAppDispatch()
@@ -76,7 +78,7 @@ const FullItem: React.FC = () => {
     }, [])
 
 
-    const [activeNav, setActiveNav] = useState<NavStatusType>(NavStatusType.Characteristics)
+    const [activeNav, setActiveNav] = useState<NavStatusType>(NavStatusType.AllAbout)
 
 
     const itemInfoSwitch = (value: NavStatusType) => {
@@ -95,25 +97,23 @@ const FullItem: React.FC = () => {
 
     return (
         <div className='container'>
-        <Helmet>
-        <title>{itemData?.title}</title>
-      </Helmet>
+            <Helmet>
+                <title>{itemData?.title}</title>
+            </Helmet>
             <div className={s.fullItem}>
                 <div className="container">
                     <nav className={s.itemNavBlock}>
                         <ul className={s.itemNavList}>
-                            <li className={s.itemNavElement}>
-                                <button onClick={() => setActiveNav(NavStatusType.AllAbout)} className={s.itemNavBtn}>Всё о товаре</button>
-                            </li>
-                            <li className={s.itemNavElement}>
-                                <button onClick={() => setActiveNav(NavStatusType.Characteristics)} className={s.itemNavBtn}>Характеристики</button>
-                            </li>
-                            <li className={s.itemNavElement}>
-                                <button className={s.itemNavBtn}>Отзывы</button>
-                            </li>
-                            <li className={s.itemNavElement}>
-                                <button className={s.itemNavBtn}>Фото</button>
-                            </li>
+
+                            {navValues.map(item => {
+                                return (
+                                    <li className={`${s.itemNavElement} ${activeNav === item ? s.activeNav : ''}`}>
+                                        <button
+                                            onClick={() => setActiveNav(item)}
+                                            className={`${s.itemNavBtn} ${activeNav === item ? s.activeNavButton : ''}`}>{item}</button>
+                                    </li>
+                                )
+                            })}
                         </ul>
                     </nav>
                     <div className={s.fullItemInner}>
