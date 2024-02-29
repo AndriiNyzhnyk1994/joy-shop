@@ -7,6 +7,7 @@ import IsAviable from '../../assets/IsAviable/IsAviable'
 import Favorites from '../../assets/favorites/Favorites'
 import BonusInfoBlock from '../../assets/BonusInfoBlock/BonusInfoBlock'
 import AdvancedRating from '../../assets/AdvancedRating/AdvancedRating'
+import PurchaseMainBlock from '../PurchaseMainBlock/PurchaseMainBlock'
 
 
 
@@ -20,7 +21,7 @@ const ItemCharacteristics:React.FC<PropsType> = ({onAddItem, fullItemData}) => {
 
     const [isFavorite, setIsFavorite] = useState(false)
 
-    return (
+    return ( 
         fullItemData
         ? <div className={s.wrapper}>
             <div className={s.itemTopInfo}>
@@ -40,26 +41,7 @@ const ItemCharacteristics:React.FC<PropsType> = ({onAddItem, fullItemData}) => {
                                     </div>
                                 <p className={s.itemTitle}>{fullItemData.title}</p>
                             </div>
-                            <div className={s.purchaseMainBlock}>
-                                <div className={s.sellerInfo}>Продавец: <a href="#">JOY SHOP</a></div>
-                                <div className={s.priceAndFavorites}>
-                                    <div className={s.priceInfo}>
-                                        <h3>{fullItemData.price}</h3>
-                                        <IsAviable isAviable={fullItemData.isAviable}/>                                        
-                                    </div>
-                                    <Favorites />
-                                </div>
-                                <div className={s.buyButtons}>
-                                    <button onClick={onAddItem} className={s.buyBtn}>
-                                        <img src={cartIcon} alt="Cart Icon" />
-                                        Купить
-                                    </button>
-                                    <button className={`${s.buyBtn} ${s.buyInCredit}`}>
-                                        Купить в кредит
-                                    </button>
-                                </div>
-                                <BonusInfoBlock />
-                            </div>
+                            <PurchaseMainBlock fullItemData={fullItemData} onAddItem={onAddItem} />
                         </div>
                     </div>
         </div>

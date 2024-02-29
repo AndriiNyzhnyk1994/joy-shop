@@ -38,7 +38,7 @@ export type ItemFullInfoType = {
 }
 
 
-const navValues = ['Характеристики', 'Всё о товаре', 'Отзывы', 'Фото'] as NavStatusType[]
+const navValues = ['Всё о товаре', 'Характеристики', 'Отзывы', 'Фото'] as NavStatusType[]
 
 const FullItem: React.FC = () => {
 
@@ -85,12 +85,12 @@ const FullItem: React.FC = () => {
         if (itemData) {
             switch (value) {
                 case NavStatusType.AllAbout: {
-                    return <AllAboutItem itemData={itemData} />
+                    return <AllAboutItem onAddItem={onAddItem} itemData={itemData} />
                 }
                 case NavStatusType.Characteristics: {
                     return <ItemCharacteristics fullItemData={itemData} onAddItem={onAddItem} />
                 }
-                default: return <AllAboutItem itemData={itemData} />
+                default: return <AllAboutItem onAddItem={onAddItem} itemData={itemData} />
             }
         }
     }

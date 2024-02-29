@@ -10,12 +10,14 @@ import Favorites from '../../assets/favorites/Favorites'
 import AdvancedRating from '../../assets/AdvancedRating/AdvancedRating'
 import BonusInfoBlock from '../../assets/BonusInfoBlock/BonusInfoBlock'
 import ItemInfoBlank from '../ItemInfoBlank/ItemInfoBlank'
+import PurchaseMainBlock from '../PurchaseMainBlock/PurchaseMainBlock'
 
 type PropsType = {
     itemData: ItemFullInfoType
+    onAddItem: () => void
 }
 
-const AllAboutItem: React.FC<PropsType> = ({ itemData }) => {
+const AllAboutItem: React.FC<PropsType> = ({ itemData, onAddItem }) => {
 
     const {
         category,
@@ -31,7 +33,7 @@ const AllAboutItem: React.FC<PropsType> = ({ itemData }) => {
         title
     } = itemData
 
-    return (
+    return ( 
         <div className={s.allAboutItem}>
             <div className={s.aboutLeft}>
                 <div className={s.itemGalleryMain}>
@@ -49,21 +51,7 @@ const AllAboutItem: React.FC<PropsType> = ({ itemData }) => {
                         <AdvancedRating value={rating} size={20} showValue={false} />
                     </div>
                 </div>
-                <div className={s.buyOptionsBlock}>
-                    <div className={s.sellerInfo}>Продавец: <a href="#">JOY SHOP</a></div>
-                    <div className={s.buyOptions}>
-                        <div className={s.priceAndAviable}>
-                            <span className={s.price}>{price}</span>
-                            <IsAviable isAviable={isAviable} />
-                        </div>
-                        <button className={s.buyBtn}>
-                            <img src={cartIcon} alt="Cart Icon" />
-                            Купить
-                        </button>
-                        <Favorites />
-                    </div>
-                    <BonusInfoBlock />
-                </div>
+                <PurchaseMainBlock  fullItemData={itemData} onAddItem={onAddItem} />
                 
 
             </div>
