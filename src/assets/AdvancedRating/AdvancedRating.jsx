@@ -3,7 +3,7 @@ import s from './AdvancedRating.module.css'
 import './AdvancedRating.css'
 
 
-function AdvancedRating({ value }) {
+function AdvancedRating({ value, size }) {
 
     const [widthValue, setWidthValue] = useState(() => {
         const ratingActiveWidth = value / 0.05
@@ -12,7 +12,7 @@ function AdvancedRating({ value }) {
 
 
     return (
-        <div className="rating">
+        <div style={{fontSize: `${size}px`}} className="rating">
             <div className="rating__body">
                 <div style={{ width: `${widthValue}%` }} className="rating__active"></div>
                 <div className="rating__items">

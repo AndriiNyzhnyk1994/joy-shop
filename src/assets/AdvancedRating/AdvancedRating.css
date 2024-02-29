@@ -1,7 +1,7 @@
 .rating {
     display: flex;
     align-items: flex-end;
-    font-size: 40px;
+    font-size: 20px;
     line-height: 0.75;
 }
 .rating__body {
