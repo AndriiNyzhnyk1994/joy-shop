@@ -39,19 +39,25 @@ const AllAboutItem: React.FC<PropsType> = ({ itemData }) => {
             <div className={s.aboutRight}>
                 <div className={s.titleBlock}>
                     <h3 className={s.title}>{title}</h3>
-                </div>
-                <div className={s.buyOptions}>
-                    <div className={s.priceAndAviable}>
-                        <span className={s.price}>{price}</span>
-                        <IsAviable isAviable={isAviable} />
+                    <div className={s.ratingBlock}>
+                        <AdvancedRating value={3.4} size={20} showValue={false} />
                     </div>
-                    <button className={s.buyBtn}>
-                        <img src={cartIcon} alt="Cart Icon" />
-                        Купить
-                    </button>
-                    <Favorites/>
                 </div>
-            <AdvancedRating value={3.4} size={20} showValue={false}/>
+                <div className={s.buyOptionsBlock}>
+                    <div className={s.sellerInfo}>Продавец: <a href="#">JOY SHOP</a></div>
+                    <div className={s.buyOptions}>
+                        <div className={s.priceAndAviable}>
+                            <span className={s.price}>{price}</span>
+                            <IsAviable isAviable={isAviable} />
+                        </div>
+                        <button className={s.buyBtn}>
+                            <img src={cartIcon} alt="Cart Icon" />
+                            Купить
+                        </button>
+                        <Favorites />
+                    </div>
+                </div>
+
             </div>
         </div>
     )

@@ -10,7 +10,7 @@
     padding-right: 20px;
     box-sizing: border-box;
 }
-
+ 
 .aboutRight {
     width: 50%;
     padding-left: 20px;
@@ -20,7 +20,7 @@
 .titleBlock {
     box-sizing: border-box;
     width: 100%;
-    min-height: 80px;
+    min-height: 70px;
     border: 1px solid lightgray;
     border-radius: 10px;
     padding: 10px;
@@ -30,6 +30,28 @@
     font-weight: 500;
     font-size: 25px;
 }
+.ratingBlock {
+    margin-top: 10px;
+}
+
+.buyOptionsBlock {
+    border: 1px solid lightgray;
+    border-radius: 10px;
+    margin-top: 20px;
+    padding: 10px;
+}
+
+.sellerInfo {
+    width: 100%;
+    
+    font-size: 16px;
+    height: 30px;
+    border-bottom: 1px solid lightgray;
+}
+.sellerInfo a:hover {
+    color: brown;
+}
+
 
 .buyOptions {
     display: flex;
