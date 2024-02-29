@@ -28,7 +28,7 @@ const AdvancedRating:React.FC<PropsType> = ({ value, size, showValue }) => {
                     <input type="radio" className={s.rating__item} value="5" name="rating" />
                 </div>
             </div>
-            {showValue && <div className={s.rating__value}>{value}</div>}
+            {showValue && <div className={s.rating__value}>Rating is {value}</div>}
         </div>
     );
 }

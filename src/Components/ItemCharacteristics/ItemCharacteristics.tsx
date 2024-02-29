@@ -1,14 +1,12 @@
 import React, { useState } from 'react'
 import s from './ItemCharacteristics.module.css'
 import ItemInfoBlank, { BlankItemType } from '../ItemInfoBlank/ItemInfoBlank'
-import RatingScreen from '../Rating/RatingScreen'
 import cartIcon from '../../assets/images/cart.svg'
-import favoritesIcon from '../../assets/images/favorite.svg'
-import favoritesAddedIcon from '../../assets/images/favorite-added.svg'
 import { ItemFullInfoType } from '../../Pages/FullItem/FullItem'
 import IsAviable from '../../assets/IsAviable/IsAviable'
 import Favorites from '../../assets/favorites/Favorites'
 import BonusInfoBlock from '../../assets/BonusInfoBlock/BonusInfoBlock'
+import AdvancedRating from '../../assets/AdvancedRating/AdvancedRating'
 
 
 
@@ -28,7 +26,7 @@ const ItemCharacteristics:React.FC<PropsType> = ({onAddItem, fullItemData}) => {
             <div className={s.itemTopInfo}>
                 <h2 className={s.itemTopTitle}>{fullItemData.title}</h2>
                 <div className={s.itemRating}>
-                    <RatingScreen showNumber={false} starSize={16} rating={fullItemData.rating} />
+                    <AdvancedRating value={fullItemData.rating} size={23} showValue={false} />
                     <span className={s.reviewsLink}>{fullItemData.reviews.length} reviews</span>
                     <span className={s.itemCode}>Code: 338500994</span>
                 </div>

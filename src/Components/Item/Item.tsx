@@ -6,6 +6,7 @@ import RatingScreen from '../Rating/RatingScreen'
 import { Link } from 'react-router-dom'
 import { cropString } from '../../utils/cropString'
 import IsAviable from '../../assets/IsAviable/IsAviable'
+import AdvancedRating from '../../assets/AdvancedRating/AdvancedRating'
 
 type ItemPropsType = ItemType
  
@@ -43,7 +44,7 @@ const Item: React.FC<ItemPropsType> = (props) => {
                 <span title={title} className={s.itemTitle}>{croppedTitle}</span>
             </Link>
             <IsAviable isAviable={isAviable}/>
-            <RatingScreen showNumber={true} starSize={16} rating={rating} />
+            <AdvancedRating showValue={true} size={20} value={rating}/>
             <div className={s.priceAndBuy}>
                 <div className={s.price}>{price}</div>
                 <button onClick={addToCart} className={s.addButton}>ADD TO CART</button>

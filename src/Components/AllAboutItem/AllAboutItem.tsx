@@ -46,7 +46,7 @@ const AllAboutItem: React.FC<PropsType> = ({ itemData }) => {
                 <div className={s.titleBlock}>
                     <h3 className={s.title}>{title}</h3>
                     <div className={s.ratingBlock}>
-                        <AdvancedRating value={3.4} size={20} showValue={false} />
+                        <AdvancedRating value={rating} size={20} showValue={false} />
                     </div>
                 </div>
                 <div className={s.buyOptionsBlock}>
