@@ -9,6 +9,7 @@ import favoritesAddedIcon from '../../assets/images/favorite-added.svg'
 import Favorites from '../../assets/favorites/Favorites'
 import AdvancedRating from '../../assets/AdvancedRating/AdvancedRating'
 import BonusInfoBlock from '../../assets/BonusInfoBlock/BonusInfoBlock'
+import ItemInfoBlank from '../ItemInfoBlank/ItemInfoBlank'
 
 type PropsType = {
     itemData: ItemFullInfoType
@@ -35,6 +36,10 @@ const AllAboutItem: React.FC<PropsType> = ({ itemData }) => {
             <div className={s.aboutLeft}>
                 <div className={s.itemGalleryMain}>
                     <ImagesSlider images={photos} />
+                </div>
+                <div className={s.descriptionBlock}>
+                    <h2 className={s.descriptionTitle}>Описание</h2>
+                    <p className={s.descriptionText}>{description}</p>
                 </div>
             </div>
             <div className={s.aboutRight}>

@@ -42,14 +42,23 @@
 }
 
 .sellerInfo {
-    width: 100%;
-    
+    width: 100%;   
     font-size: 16px;
     height: 30px;
     border-bottom: 1px solid lightgray;
 }
 .sellerInfo a:hover {
     color: brown;
+}
+
+.descriptionTitle {
+    font-size: 30px;
+    font-weight: 500;
+    padding-left: 5px;
+}
+.descriptionText {
+    line-height: 1.5;
+    font-size: 16px;
 }
 
 
