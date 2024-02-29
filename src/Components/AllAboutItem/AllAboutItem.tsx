@@ -2,14 +2,7 @@ import React from 'react'
 import s from './AllAboutItem.module.css'
 import ImagesSlider from '../../assets/ImagesSlider/ImagesSlider'
 import { ItemFullInfoType } from '../../Pages/FullItem/FullItem'
-import IsAviable from '../../assets/IsAviable/IsAviable'
-import cartIcon from '../../assets/images/cart.svg'
-import favoritesIcon from '../../assets/images/favorite.svg'
-import favoritesAddedIcon from '../../assets/images/favorite-added.svg'
-import Favorites from '../../assets/favorites/Favorites'
 import AdvancedRating from '../../assets/AdvancedRating/AdvancedRating'
-import BonusInfoBlock from '../../assets/BonusInfoBlock/BonusInfoBlock'
-import ItemInfoBlank from '../ItemInfoBlank/ItemInfoBlank'
 import PurchaseMainBlock from '../PurchaseMainBlock/PurchaseMainBlock'
 
 type PropsType = {
@@ -52,8 +45,6 @@ const AllAboutItem: React.FC<PropsType> = ({ itemData, onAddItem }) => {
                     </div>
                 </div>
                 <PurchaseMainBlock  fullItemData={itemData} onAddItem={onAddItem} />
-                
-
             </div>
         </div>
     )

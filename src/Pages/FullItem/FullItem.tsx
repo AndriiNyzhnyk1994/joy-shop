@@ -107,10 +107,10 @@ const FullItem: React.FC = () => {
 
                             {navValues.map(item => {
                                 return (
-                                    <li className={`${s.itemNavElement} ${activeNav === item ? s.activeNav : ''}`}>
-                                        <button
-                                            onClick={() => setActiveNav(item)}
-                                            className={`${s.itemNavBtn} ${activeNav === item ? s.activeNavButton : ''}`}>{item}</button>
+                                    <li
+                                        onClick={() => setActiveNav(item)}
+                                        className={`${s.itemNavElement} ${activeNav === item ? s.activeNav : ''}`}>
+                                        {item}
                                     </li>
                                 )
                             })}

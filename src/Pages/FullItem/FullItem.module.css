@@ -14,6 +14,8 @@
     position: relative;
     padding: 5px;
     margin-left: 15px;
+    font-size: 16px;
+    cursor: pointer;
 }
 
 .itemNavBtn {
@@ -24,10 +26,12 @@
 
 .itemNavElement:hover {
     border-bottom: 3px solid brown;
+    color: brown;
 }
 
 .activeNav {
     border-bottom: 3px solid brown;
+    color: brown;
 }
 .activeNavButton {
     color: brown;
