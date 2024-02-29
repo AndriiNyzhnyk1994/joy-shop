@@ -5,6 +5,7 @@ import { useSelector } from 'react-redux'
 import { RootState, useAppDispatch } from '../../redux/store'
 import delIconBlack from '../../assets/images/delete-icon-black.svg'
 import { clearCart } from '../../redux/slices/cart/slice'
+import { Helmet } from 'react-helmet'
 
 function Cart() {
     const { items, totalPrice } = useSelector((state: RootState) => state.cart)
@@ -20,6 +21,9 @@ function Cart() {
 
     return (
         <div className={s.cart}>
+            <Helmet>
+                <title>Cart</title>
+            </Helmet>
             <div className='container'>
                 <div className={s.cartTitle}>
                     <h2>Cart</h2>

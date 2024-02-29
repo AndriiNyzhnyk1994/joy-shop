@@ -3,12 +3,11 @@ import s from './FullItem.module.css'
 import ItemCharacteristics from '../../Components/ItemCharacteristics/ItemCharacteristics'
 import { useAppDispatch } from '../../redux/store'
 import { useNavigate, useParams } from 'react-router-dom'
-import { ItemType } from '../../redux/slices/items/slice'
 import { CartItemType, addItem } from '../../redux/slices/cart/slice'
 import axios from 'axios'
-import { error } from 'console'
 import { BlankItemType } from '../../Components/ItemInfoBlank/ItemInfoBlank'
 import AllAboutItem from '../../Components/AllAboutItem/AllAboutItem'
+import { Helmet } from 'react-helmet'
 
 
 export enum NavStatusType {
@@ -96,6 +95,9 @@ const FullItem: React.FC = () => {
 
     return (
         <div className='container'>
+        <Helmet>
+        <title>{itemData?.title}</title>
+      </Helmet>
             <div className={s.fullItem}>
                 <div className="container">
                     <nav className={s.itemNavBlock}>

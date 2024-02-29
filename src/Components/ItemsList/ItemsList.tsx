@@ -7,6 +7,7 @@ import { useEffect } from 'react'
 import loadingIcon from '../../assets/images/loading.png'
 import ErrorBlock from '../Error/Error'
 import { addNewItem } from '../../redux/thunks/addItem'
+import { Helmet } from 'react-helmet'
 
 
 const ItemsList: React.FC = () => {
@@ -34,6 +35,9 @@ const ItemsList: React.FC = () => {
 
     return (
         <main className={s.itemsBlock}>
+            <Helmet>
+                <title>Catalog</title>
+            </Helmet>
             <div className='container'>
                 {status === Status.LOADING
                     ? <div className={'loadingBlock'}>
