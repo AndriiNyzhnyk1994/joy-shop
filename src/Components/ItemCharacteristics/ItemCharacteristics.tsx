@@ -3,12 +3,12 @@ import s from './ItemCharacteristics.module.css'
 import ItemInfoBlank, { BlankItemType } from '../ItemInfoBlank/ItemInfoBlank'
 import RatingScreen from '../Rating/RatingScreen'
 import cartIcon from '../../assets/images/cart.svg'
-import bonusIcon from '../../assets/images/bonusIcon.svg'
 import favoritesIcon from '../../assets/images/favorite.svg'
 import favoritesAddedIcon from '../../assets/images/favorite-added.svg'
 import { ItemFullInfoType } from '../../Pages/FullItem/FullItem'
 import IsAviable from '../../assets/IsAviable/IsAviable'
 import Favorites from '../../assets/favorites/Favorites'
+import BonusInfoBlock from '../../assets/BonusInfoBlock/BonusInfoBlock'
 
 
 
@@ -19,8 +19,6 @@ type PropsType = {
 
 
 const ItemCharacteristics:React.FC<PropsType> = ({onAddItem, fullItemData}) => {
-
-    
 
     const [isFavorite, setIsFavorite] = useState(false)
 
@@ -62,13 +60,7 @@ const ItemCharacteristics:React.FC<PropsType> = ({onAddItem, fullItemData}) => {
                                         Купить в кредит
                                     </button>
                                 </div>
-                                <div className={s.bonusInfoBlock}>
-                                    <img className={s.bonusIcon} src={bonusIcon} alt="Bonus Icon" />
-                                    <span className={s.bonusText}>
-                                        <b>+ 20 бонусных ₴ </b>
-                                        на счёт при покупке
-                                    </span>
-                                </div>
+                                <BonusInfoBlock />
                             </div>
                         </div>
                     </div>

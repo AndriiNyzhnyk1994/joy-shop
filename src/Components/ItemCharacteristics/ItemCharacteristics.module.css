@@ -102,7 +102,7 @@
     height: 40px;
 }
 
-
+ 
 
 .buyButtons {
     margin-top: 20px;
@@ -152,21 +152,3 @@
     color: white
 }
 
-.bonusInfoBlock {
-    margin-top: 20px;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    font-size: 15px;
-    border-top: 1px solid lightgray;
-    padding-top: 10px;
-}
-
-.bonusIcon {
-    width: 25px;
-    height: 25px;
-}
-
-.bonusText {
-    margin-left: 10px;
-}
