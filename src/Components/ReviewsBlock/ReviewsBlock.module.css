@@ -1,0 +1,17 @@
+.reviewsBlock {
+    width: 100%;
+    min-height: 500px;
+}
+
+.reviewsBlockInner {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.reviewsList {
+    width: 700px;
+    height: 500px;
+    box-sizing: border-box;
+}
+

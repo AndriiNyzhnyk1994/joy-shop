@@ -1,0 +1,18 @@
+.itemRating {
+    display: flex;
+    justify-content: space-between;
+}
+
+.itemCode {
+    font-size: 15px;
+    color: grey;
+}
+.reviewsLink {
+    font-size: 15px; 
+    margin-right: auto;
+    margin-left: 10px;
+    cursor: pointer;
+}
+.reviewsLink:hover {
+    color: brown;
+}

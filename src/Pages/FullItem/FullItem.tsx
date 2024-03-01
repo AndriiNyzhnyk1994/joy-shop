@@ -8,6 +8,7 @@ import axios from 'axios'
 import { BlankItemType } from '../../Components/ItemInfoBlank/ItemInfoBlank'
 import AllAboutItem from '../../Components/AllAboutItem/AllAboutItem'
 import { Helmet } from 'react-helmet'
+import ReviewsBlock from '../../Components/ReviewsBlock/ReviewsBlock'
 
 
 export enum NavStatusType {
@@ -48,6 +49,7 @@ const FullItem: React.FC = () => {
 
     const [itemData, setItemData] = useState<ItemFullInfoType>()
 
+    const [activeNav, setActiveNav] = useState<NavStatusType>(NavStatusType.AllAbout)
 
     const onAddItem = () => {
 
@@ -64,6 +66,25 @@ const FullItem: React.FC = () => {
         }
     }
 
+    const itemInfoSwitch = (value: NavStatusType) => {
+        if (itemData) {
+            switch (value) {
+                case NavStatusType.AllAbout: {
+                    return <AllAboutItem onAddItem={onAddItem} itemData={itemData} />
+                }
+                case NavStatusType.Characteristics: {
+                    return <ItemCharacteristics fullItemData={itemData} onAddItem={onAddItem} />
+                }
+                case NavStatusType.Reviews: {
+                    return <ReviewsBlock fullItemData={itemData} onAddItem={onAddItem} />
+                }
+                default: return <AllAboutItem onAddItem={onAddItem} itemData={itemData} />
+            }
+        }
+    }
+
+
+
     useEffect(() => {
         async function fetchItem() {
             try {
@@ -78,50 +99,36 @@ const FullItem: React.FC = () => {
     }, [])
 
 
-    const [activeNav, setActiveNav] = useState<NavStatusType>(NavStatusType.AllAbout)
-
-
-    const itemInfoSwitch = (value: NavStatusType) => {
-        if (itemData) {
-            switch (value) {
-                case NavStatusType.AllAbout: {
-                    return <AllAboutItem onAddItem={onAddItem} itemData={itemData} />
-                }
-                case NavStatusType.Characteristics: {
-                    return <ItemCharacteristics fullItemData={itemData} onAddItem={onAddItem} />
-                }
-                default: return <AllAboutItem onAddItem={onAddItem} itemData={itemData} />
-            }
-        }
-    }
 
     return (
-        <div className='container'>
-            <Helmet>
-                <title>{itemData?.title}</title>
-            </Helmet>
-            <div className={s.fullItem}>
-                <div className="container">
-                    <nav className={s.itemNavBlock}>
-                        <ul className={s.itemNavList}>
-
-                            {navValues.map(item => {
-                                return (
-                                    <li
-                                        onClick={() => setActiveNav(item)}
-                                        className={`${s.itemNavElement} ${activeNav === item ? s.activeNav : ''}`}>
-                                        {item}
-                                    </li>
-                                )
-                            })}
-                        </ul>
-                    </nav>
-                    <div className={s.fullItemInner}>
-                        {itemInfoSwitch(activeNav)}
+        itemData
+            ? <div className='container'>
+                <Helmet>
+                    <title>{itemData.title}</title>
+                </Helmet>
+                <div className={s.fullItem}>
+                    <div className="container">
+                        <nav className={s.itemNavBlock}>
+                            <div className={s.itemNavList}>
+                                {navValues.map(item => {
+                                    return (
+                                        <div
+                                            key={item}
+                                            onClick={() => setActiveNav(item)}
+                                            className={`${s.itemNavElement} ${activeNav === item ? s.activeNav : ''}`}>
+                                            {item}
+                                        </div>
+                                    )
+                                })}
+                            </div>
+                        </nav>
+                        <div className={s.fullItemInner}>
+                            {itemInfoSwitch(activeNav)}
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
+            : <></>
     )
 }
 

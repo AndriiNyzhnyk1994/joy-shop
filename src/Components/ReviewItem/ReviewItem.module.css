@@ -1,0 +1,22 @@
+
+.reviewItem {
+    width: 100%;
+    padding: 20px;
+    border: 1px solid lightgray;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+.userName {
+    font-weight: 500;
+}
+ 
+.ratingBlock {
+    display: flex;
+    margin-top: 10px;    
+}
+.reviewText {
+    margin-top: 10px;
+    font-size: 16px;
+    line-height: 1.5;
+}

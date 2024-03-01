@@ -12,7 +12,7 @@ const App: React.FC = () => {
       <Route path='/' element={<MainLayout />}>
         <Route path='/' element={<ItemsList />} />
         <Route path='/cart' element={<Cart />} />
-        <Route path='/element/:id' element={<FullItem />} />
+        <Route path='/element/:id/*' element={<FullItem />} />
         <Route path="*" element={<ErrorBlock/>}/>
       </Route>
     </Routes>
