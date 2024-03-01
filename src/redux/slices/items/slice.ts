@@ -10,6 +10,7 @@ export enum Status {
 export type ReviewType = {
     name: string
     text: string
+    rate: number
 }
 
 export type ItemType = {

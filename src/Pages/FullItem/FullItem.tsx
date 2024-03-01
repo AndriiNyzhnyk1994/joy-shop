@@ -9,6 +9,7 @@ import { BlankItemType } from '../../Components/ItemInfoBlank/ItemInfoBlank'
 import AllAboutItem from '../../Components/AllAboutItem/AllAboutItem'
 import { Helmet } from 'react-helmet'
 import ReviewsBlock from '../../Components/ReviewsBlock/ReviewsBlock'
+import { ReviewType } from '../../redux/slices/items/slice'
 
 
 export enum NavStatusType {
@@ -18,11 +19,6 @@ export enum NavStatusType {
     Photo = 'Фото'
 }
 
-export type ReviewType = {
-    name: string
-    text: string
-    rate: string
-}
 
 export type ItemFullInfoType = {
     characteristics: BlankItemType[]
