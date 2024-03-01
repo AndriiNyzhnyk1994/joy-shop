@@ -23,8 +23,13 @@ const ReviewsBlock: React.FC<PropsType> = ({ fullItemData, onAddItem }) => {
             <div className={s.reviewsBlockInner}>
                 <div className={s.reviewsList}>
                     {
-                        reviewsArr.map(review => {
-                            return <ReviewItem name={review.name} reviewText={review.text} rating={review.rate} />
+                        reviewsArr.map((review, index) => {
+                            return <ReviewItem
+                                key={index}
+                                name={review.name}
+                                reviewText={review.text}
+                                rating={review.rate}
+                            />
                         })
                     }
                 </div>

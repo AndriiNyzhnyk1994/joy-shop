@@ -92,9 +92,8 @@ const FullItem: React.FC = () => {
             }
         }
         fetchItem()
+
     }, [])
-
-
 
     return (
         itemData

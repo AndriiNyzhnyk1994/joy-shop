@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react'
+import React, {  useState } from 'react'
 import s from './AdvancedRating.module.css'
 
 
@@ -28,7 +28,7 @@ const AdvancedRating:React.FC<PropsType> = ({ value, size, showValue }) => {
                     <input type="radio" className={s.rating__item} value="5" name="rating" />
                 </div>
             </div>
-            {showValue && <div className={s.rating__value}>Rating is {value}</div>}
+            {showValue && <div className={s.rating__value}>{value}</div>}
         </div>
     );
 }

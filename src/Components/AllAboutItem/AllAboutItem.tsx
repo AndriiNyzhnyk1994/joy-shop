@@ -4,6 +4,7 @@ import ImagesSlider from '../../assets/ImagesSlider/ImagesSlider'
 import { ItemFullInfoType } from '../../Pages/FullItem/FullItem'
 import AdvancedRating from '../../assets/AdvancedRating/AdvancedRating'
 import PurchaseMainBlock from '../PurchaseMainBlock/PurchaseMainBlock'
+import { calculateRating } from '../../utils/calculateRating'
 
 type PropsType = {
     itemData: ItemFullInfoType
@@ -41,7 +42,7 @@ const AllAboutItem: React.FC<PropsType> = ({ itemData, onAddItem }) => {
                 <div className={s.titleBlock}>
                     <h3 className={s.title}>{title}</h3>
                     <div className={s.ratingBlock}>
-                        <AdvancedRating value={rating} size={20} showValue={false} />
+                        <AdvancedRating value={calculateRating(reviews)} size={20} showValue={true} />
                     </div>
                 </div>
                 <PurchaseMainBlock  fullItemData={itemData} onAddItem={onAddItem} />
