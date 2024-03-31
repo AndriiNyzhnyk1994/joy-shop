@@ -1,12 +1,12 @@
 import { ReviewType } from "../redux/slices/items/slice"
 
 export const calculateRating = (reviewsArr: ReviewType[]) => {
-    let commonValue = 0
+    let allValues = 0
     reviewsArr.reduce((acc, el) => {
-        commonValue += el.rate
+        allValues += el.rate
         return acc
     }, 0)
-    console.log(commonValue / reviewsArr.length);
-
-    return (commonValue / reviewsArr.length)
+    const commonValue = (allValues / reviewsArr.length);
+    let rounded = Math.round(commonValue * 100) / 100;
+    return rounded
 }

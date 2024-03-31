@@ -11,6 +11,12 @@ type PropsType = {
 const AdvancedRating:React.FC<PropsType> = ({ value, size, showValue }) => {
 
     const [widthValue, setWidthValue] = useState(() => {
+        // right here expression: `value / 0.05` 
+        // means that value (rating number from 1 till 5) becomes a percent number
+        // (from 10% till 100%)
+        // if value is 4.5, then ratingActiveWidth will be 90%
+
+        // we need it for using a percent value to fill gray star rating by gold color
         const ratingActiveWidth = value / 0.05
         return ratingActiveWidth
     })

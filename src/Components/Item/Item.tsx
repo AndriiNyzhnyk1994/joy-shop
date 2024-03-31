@@ -44,7 +44,7 @@ const Item: React.FC<ItemPropsType> = (props) => {
                 <span title={title} className={s.itemTitle}>{croppedTitle}</span>
             </Link>
             <IsAviable isAviable={isAviable}/>
-            <AdvancedRating showValue={true} size={20} value={rating}/>
+            <AdvancedRating showValue={false} size={20} value={rating}/>
             <div className={s.priceAndBuy}>
                 <div className={s.price}>{price}</div>
                 <button onClick={addToCart} className={s.addButton}>ADD TO CART</button>
